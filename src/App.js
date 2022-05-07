@@ -16,7 +16,7 @@ function App() {
       <header className="App-header">
         <ul className="menu-ul">
           <li className="menu-li">
-            <a href="#" className="menu-a">
+            <a href="App.js" className="menu-a">
               Home
             </a>
           </li>
