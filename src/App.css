@@ -28,6 +28,7 @@
 }
 .menu-li, .menu-a{
   text-decoration: none;
+  color: white;
 }
 .login{
   flex-direction: column;
