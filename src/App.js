@@ -16,23 +16,26 @@ function App() {
       <header className="App-header">
         <ul className="menu-ul">
           <li className="menu-li">
-            <a className="menu-a">Home</a>
+            <a href="#" className="menu-a">
+              Home
+            </a>
           </li>
         </ul>
       </header>
-
-      <div className="login">
+      <div className="login-section">
         <h2>
           Ovo je aplikacija za menadzment projekata, molim vas ulogujte se preko
           googla
         </h2>
-        <GoogleLogin
-          clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-          buttonText="Google Log in"
-          onSuccess={handleLogin}
-          onFailure={handleFailure}
-          cookiePolicy={"single_host_origin"}
-        ></GoogleLogin>
+        <div className="login">
+          <GoogleLogin
+            clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+            buttonText="Google Log in"
+            onSuccess={handleLogin}
+            onFailure={handleFailure}
+            cookiePolicy={"single_host_origin"}
+          ></GoogleLogin>
+        </div>
       </div>
     </div>
   );
