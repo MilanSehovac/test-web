@@ -8,6 +8,7 @@ function App() {
   };
   const handleLogin = (googleData) => {
     console.log(googleData);
+    alert("uspjesno ste se logovali");
   };
 
   return (
@@ -18,16 +19,21 @@ function App() {
             <a className="menu-a">Home</a>
           </li>
         </ul>
-        <div className="login">
-          <GoogleLogin
-            clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-            buttonText="Log in"
-            onSuccess={handleLogin}
-            onFailure={handleFailure}
-            cookiePolicy={"single_host_origin"}
-          ></GoogleLogin>
-        </div>
       </header>
+
+      <div className="login">
+        <h2>
+          Ovo je aplikacija za menadzment projekata, molim vas ulogujte se preko
+          googla
+        </h2>
+        <GoogleLogin
+          clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+          buttonText="Google Log in"
+          onSuccess={handleLogin}
+          onFailure={handleFailure}
+          cookiePolicy={"single_host_origin"}
+        ></GoogleLogin>
+      </div>
     </div>
   );
 }
