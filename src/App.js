@@ -3,12 +3,8 @@ import "./App.css";
 import GoogleLogin from "react-google-login";
 
 function App() {
-  const handleFailure = (result) => {
-    alert("nije uspjelo");
-  };
-  const handleLogin = (googleData) => {
-    console.log(googleData);
-    alert("uspjesno ste se logovali");
+  const responseGoogle = (response) => {
+    console.log(response);
   };
 
   return (
@@ -31,8 +27,8 @@ function App() {
           <GoogleLogin
             clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
             buttonText="Google Log in"
-            onSuccess={handleLogin}
-            onFailure={handleFailure}
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
           ></GoogleLogin>
         </div>
