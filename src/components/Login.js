@@ -1,7 +1,7 @@
 import React from 'react'
 import GoogleLogin from "react-google-login"; 
 function Login() {
-  function responseGoogle(res){
+  const responseGoogle = (res) =>{
       console.log(res.tokenId)
     }
   return (
