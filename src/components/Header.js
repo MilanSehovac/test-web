@@ -11,14 +11,14 @@ const Header = () => {
         <header className="App-header">
             <ul className="menu-ul">
                 <li className="menu-li">
-                <Link to="/">Home</Link>  
+                <Link className='menu-a' to="/">Home</Link>  
                 </li>
                 <li className="menu-li">
-                  <Link to="/Projects">Projects</Link>  
+                  <Link className='menu-a' to="/Projects">Projects</Link>  
                     
                 </li>
                 <li className="menu-li">
-                <Link to="/About">About</Link>  
+                <Link className='menu-a' to="/About">About</Link>  
                  
                 </li>
             </ul>
