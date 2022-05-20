@@ -5,6 +5,7 @@ import App from './App';
 import Header from "./components/Header";
 import About from './pages/About';
 import Projects from './pages/Projects';
+import ErrorPage from './pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -17,6 +18,7 @@ ReactDOM.render(
            <Route path="/" element={<App/>}/>
            <Route path="/about" element={<About/>}/>
            <Route path="/projects" element={<Projects/>}/>
+           <Route path="/*" element={<ErrorPage/>}/>
          </Routes>
       </Router>
   </React.StrictMode>,

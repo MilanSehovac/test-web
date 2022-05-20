@@ -1,15 +1,15 @@
 import React from 'react'
 import { Container } from '@mui/material'
 
-const Projects = () => {
+const ErrorPage = () => {
   return (
     <div>
       <Container>
-        This is a projects page
+        This page doesn't Exist  
       </Container>
+      
     </div>
   )
-
 }
 
-export default Projects
+export default ErrorPage

@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import About from '../pages/About';
-import Projects from '../pages/Projects';
 
 
 
