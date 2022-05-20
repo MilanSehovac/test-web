@@ -1,21 +1,26 @@
 import React from 'react';
 import { Container, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
-import NewProject from '../components/NewProject';
-import EditProject from '../components/EditProject';
+import { Link, Outlet } from 'react-router-dom';
+import axios from 'axios';
+import '../App.css'
+
 
 const Projects = () => {
   return (
     <div>
       <Container>
-        This is a projects page
-
-        <Button variant="text" size="small">
-          <Link to="/Projects/NewProject">New Project</Link>
+        <h3>This is a projects page</h3>
+        <Button className='btn' variant="contained" size="small">
+          <Link className="menu-a " to="/projects/NewProject">New Project</Link>
         </Button>
-        <Button variant="text" size="small">
-          <Link to="/Projects/EditProject">Edit Project</Link>
+        <Button className='btn' variant="contained" size="small">
+          <Link className="menu-a " to="/projects/EditProject">Edit Project</Link>
         </Button >
+
+        <Outlet />
+
+        
+
       </Container>
     </div>
   )
