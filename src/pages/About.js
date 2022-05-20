@@ -16,9 +16,9 @@ function ReadMore({ children = 100 }) {
     return (
         <p>
             {result}
-            <button variant="contained" onClick={toggleIsShow}>
+            <Button variant="outlined" size="small" onClick={toggleIsShow}>
                 {isShow ? "Show More" : "Show Less"}
-            </button>
+            </Button>
         </p>
     )
 

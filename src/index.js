@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import About from './pages/About';
 import Projects from './pages/Projects';
 import ErrorPage from './pages/ErrorPage';
+import NewProject from './components/NewProject'
+import EditProject from './components/EditProject'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -17,7 +19,10 @@ ReactDOM.render(
          <Routes>
            <Route path="/" element={<App/>}/>
            <Route path="/about" element={<About/>}/>
-           <Route path="/projects" element={<Projects/>}/>
+           <Route path="/projects" element={<Projects/>}>
+             <Route path="NewProject" element={<NewProject/>}/>
+             <Route path="EditProject" element={<EditProject/>}/>
+             </Route>
            <Route path="/*" element={<ErrorPage/>}/>
          </Routes>
       </Router>
